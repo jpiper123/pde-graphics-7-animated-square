@@ -2,7 +2,7 @@
  * <processing-graphics-7-animated-square>
  * by <Jonathan>
  * 
- * <Computer science assignment. This assignment will make an animated square.>
+ * <Computer science assignment. This assignment will make a controllable square.>
  * 
  */
 int x = 350;
@@ -14,6 +14,13 @@ void setup() {
 void draw() {
   background(100, 10, 100);
   rect (x,y,20,20);
+  
+ if (x<0) {
+   x = width;
+ }
+ if (x>width) {
+   x = 0;
+ }
 }
 
 void keyPressed() {
@@ -25,7 +32,7 @@ void keyPressed() {
       y = y +5;
     } 
   }
-  }
+}
   
   if (key ==CODED) {
     if (keyCode == LEFT) {
