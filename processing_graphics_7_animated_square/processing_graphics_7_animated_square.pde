@@ -13,7 +13,10 @@ void setup() {
 
 void draw() {
   background(100, 10, 100);
+  fill(255,255,255); //Square
   rect (x,y,20,20);
+  fill(255,0,0);
+  rect (0,0,700,40); //Red rectangle
   
  if (x<0) { //Makes square wrap around the sides
    x = width;
@@ -27,6 +30,11 @@ void draw() {
  }
  if (y > height) {
    y = 0;
+ }
+ 
+ if (y < 40) {
+   textSize(20);
+   text("Warning: Wormhole detected ahead.Approach with caution.", 100, 150);
  }
 }
 
