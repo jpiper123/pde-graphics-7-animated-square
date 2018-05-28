@@ -15,11 +15,18 @@ void draw() {
   background(100, 10, 100);
   rect (x,y,20,20);
   
- if (x<0) {
+ if (x<0) { //Makes square wrap around the sides
    x = width;
  }
- if (x>width) {
+ if (x > width) {
    x = 0;
+ }
+ 
+ if (y<0) { //Makes square wrap around the top/bottom
+   y = height;
+ }
+ if (y > height) {
+   y = 0;
  }
 }
 
