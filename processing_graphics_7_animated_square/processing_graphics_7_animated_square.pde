@@ -34,7 +34,7 @@ void draw() {
  
  if (y < 40) {
    textSize(20);
-   text("Warning: Wormhole detected ahead.Approach with caution.", 100, 150);
+   text("Warning: Wormhole detected ahead.Approach with caution.", 100, 150); //Warning text
  }
 }
 
