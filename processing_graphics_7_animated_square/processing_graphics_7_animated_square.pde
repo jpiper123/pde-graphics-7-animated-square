@@ -7,13 +7,18 @@
  */
 int x = 350;
 int y = 350;
+int delta = +5;
+int lasttimecheck;
+int timeinterval;
 void setup() {
   size(700, 700);
+  lasttimecheck = millis();
+  timeinterval = 5000;
 }
 
 void draw() {
-  background(100, 10, 100);
-  fill(255,255,255); //Square
+  background(0, 0, 0);
+  fill(0,255,255); //Square
   rect (x,y,20,20);
   fill(255,0,0);
   rect (0,0,700,40); //Red rectangle
@@ -42,18 +47,18 @@ void keyPressed() {
 {
   if (key == CODED) {
     if (keyCode == UP) {
-      y = y -5;
+      y = y -delta;
     } else if (keyCode == DOWN) {
-      y = y +5;
+      y = y +delta;
     } 
-  }
-}
-  
-  if (key ==CODED) {
     if (keyCode == LEFT) {
-      x = x -5;
+      x = x -delta;
     } else if (keyCode == RIGHT) {
-      x = x +5;
+      x = x +delta;
     }
   }
+  if (key == 'p') {
+    delta = 10;
+  }
+ }
 }
