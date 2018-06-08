@@ -8,12 +8,8 @@
 int x = 350;
 int y = 350;
 int delta = +5;
-int lasttimecheck;
-int timeinterval;
 void setup() {
   size(700, 700);
-  lasttimecheck = millis();
-  timeinterval = 5000;
 }
 
 void draw() {
